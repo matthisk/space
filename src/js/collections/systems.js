@@ -30,7 +30,7 @@ function generateStars( center, starsPerArm ) {
 }
 
 export default class SystemsCollection {
-	constructor( worldScale, nSystems = 796 ) {
+	constructor( worldScale, nSystems = 10 ) {
 		this.worldScale = worldScale;
 		this.systems = [];
 		this.initConfig();

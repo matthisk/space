@@ -9,7 +9,7 @@ export default class Planet {
       y: 0,
       r: this.system.randomRadius(),
       a: getRandom(0,360),
-      v: 0.000001 * getRandom(25,75), // Velocity of planet per ms
+      v: 0.000001 * getRandom(1,2), // Velocity of planet per ms
       size: getRandom(5,15)
     };
   }
@@ -20,8 +20,8 @@ export default class Planet {
         r = this.pos.r;
 
     this.pos.a = (a + v) % 360;
-    this.pos.x = (this.system.x + r * Math.cos(a));
-    this.pos.y = (this.system.y + r * Math.sin(a));
+    this.pos.x = (r * Math.cos(a));
+    this.pos.y = (r * Math.sin(a));
   }
 
   update( elapsedTime ) {

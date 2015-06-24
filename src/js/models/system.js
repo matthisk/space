@@ -1,9 +1,9 @@
 import Planet from './planet';
-import { getRandom } from '../tools';
+import { getRandomInt, getRandom } from '../tools';
 
 export default class System {
-  constructor( x, y, nPlanets = getRandom(1,5) ) {
-  	var radius = getRandom(100, 250);
+  constructor( x, y, nPlanets = getRandomInt(1,5) ) {
+  	var radius = getRandom(50, 100);
 
     this.point = new Phaser.Point(x,y);
     this.pos = { 
